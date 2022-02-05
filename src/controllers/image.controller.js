@@ -37,6 +37,7 @@ const uploadImage = async (req, res) => {
         blobStream.end(file.buffer);
       });
     });
+
     const info = await Promise.allSettled(uploads);
     const resObj = {
       success: true,
